@@ -60,7 +60,7 @@ const Comment = ({ user }) => {
     setEditValue(comment);
     setEditBox(true);
   };
-
+// 댓글 수정
   const completeHandler = async (user, comment) => {
     setEditBox(false);
     await updateDoc(doc(db, 'comments', user.id), { comment: comment });
